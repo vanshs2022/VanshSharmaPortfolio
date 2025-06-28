@@ -26,7 +26,7 @@ const About = () => {
   return (
     <motion.div
       id="about"
-      className="relative about h-[100vh] w-[100vw] bg-black-900 flex flex-col items-center justify-center relative"
+      className="about h-[100vh] w-[100vw] bg-black-900 flex flex-col items-center justify-center relative"
     >
       <div className="canva absolute inset-0 z-0">
         <Canvas>

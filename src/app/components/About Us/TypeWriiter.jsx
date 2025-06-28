@@ -3,7 +3,7 @@ import { useTypewriter } from "react-simple-typewriter";
 
 const TypeWriiter = () => {
   const [typeEffect] = useTypewriter({
-    words: ["Web Developer ?", "Data Analyst ?", "Actor ?", "Rapper ?", "Writter ?"],
+    words: ["Frontend Developer ?", "Backend Developer ?", "Python Developer ?"],
     loop: {},
     typeSpeed: 50,
     deleteSpeed: 30,

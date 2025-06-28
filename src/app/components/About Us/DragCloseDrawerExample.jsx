@@ -1,40 +1,56 @@
 import React from "react";
-import { useState } from 'react';
+import { useState } from "react";
 import useMeasure from "react-use-measure";
-import {  useDragControls} from "framer-motion";
-import {  useMotionValue} from "framer-motion";
-import {  useAnimate} from "framer-motion";
-import {  motion} from "framer-motion";
+import { useDragControls } from "framer-motion";
+import { useMotionValue } from "framer-motion";
+import { useAnimate } from "framer-motion";
+import { motion } from "framer-motion";
 
 const DragCloseDrawerExample = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="grid h-[20px] w-[fit-content]  place-content-center bg-neutral-950">
+    <div className="grid h-[20px] w-[fit-content]  place-content-center bg-neutral-950 z-[999] ">
       <button
         onClick={() => setOpen(true)}
         className="rounded bg-indigo-500 px-4 py-2 text-white transition-colors hover:bg-indigo-600"
       >
-        Find Out 
+        Find Out
       </button>
 
       <DragCloseDrawer open={open} setOpen={setOpen}>
-        <div className="mx-auto max-w-2xl space-y-4 text-neutral-400">
-          <h2 className="text-4xl font-bold text-neutral-200 text-slate-400 ">
-            Fueling My Growth: A Lifelong Learner's Journey
+        <div className="mx-auto max-w-2xl space-y-4 text-neutral-400 ">
+          <h2 className="text-4xl font-bold text-slate-400">
+            Building Ideas Into Impact: A Developer’s Creative Journey
           </h2>
           <p>
-          I'm a BTech student at the Vellore Institute of Technology, and I'm passionate about harnessing the power of data and technology to tackle challenges and create innovative solutions.  I believe in the power of a growth mindset, constantly seeking opportunities to learn and expand my skillset. Every day is a chance to push my boundaries and become a better version of myself.
+            I'm Vansh Sharma, a BTech student at Vellore Institute of
+            Technology, driven by a passion for tech-powered problem-solving. My
+            journey blends software development, artificial intelligence, and
+            design into purposeful creation. Whether it's building full-stack
+            applications or experimenting with deep learning models, I’m
+            constantly exploring how technology can make ideas come alive.
           </p>
           <p>
-          My academic journey has led me to explore the exciting world of data analytics. I'm also well-versed in web development, having built projects that showcase my ability to translate ideas into reality. But my interests extend beyond the technical realm. I'm a problem-solver at heart, driven by the thrill of untangling complex issues and finding creative solutions.
+            I specialize in web development using tools like React, Tailwind,
+            and Express. On the AI side, I’ve worked with YOLOv10, CNNs, and
+            ResNet on projects involving bacterial detection and waterborne
+            contaminant identification. I enjoy diving deep into custom
+            datasets, training models, and solving real-world challenges with
+            efficient code and creative thinking.
           </p>
           <p>
-          When I'm not immersed in code or data, you'll find me expressing myself creatively. I find joy in rapping and songwriting, where I can weave words into narratives and tap into emotions. Basketball provides a healthy outlet for my competitive spirit and teamwork skills, while acting allows me to explore different personalities and perspectives. These diverse pursuits fuel my overall growth and bring a sense of balance to my life.
+            I actively participate in hackathons, lead student initiatives, and
+            collaborate with peers to build innovative solutions under tight
+            deadlines. My roles often span backend logic, database design, and
+            team communication, where I bring both structure and creativity to
+            the table.
           </p>
           <p>
-          As you navigate through my portfolio, you'll gain insights into my technical capabilities, problem-solving approach, and unwavering focus on career growth.  Welcome to my world, where learning is a constant, and the journey towards excellence never ends!
+            This portfolio is a window into my world — one where code,
+            collaboration, and curiosity meet. I believe growth comes from
+            staying hands-on, learning fast, and taking ownership. Thanks for
+            stopping by — let’s build something meaningful.
           </p>
-          
         </div>
       </DragCloseDrawer>
     </div>
@@ -118,4 +134,4 @@ const DragCloseDrawer = ({ open, setOpen, children }) => {
   );
 };
 
-export default  DragCloseDrawerExample
+export default DragCloseDrawerExample;
