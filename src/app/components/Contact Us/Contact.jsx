@@ -6,8 +6,11 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMapPin, FiMail } from "react-icons/fi";
 import { SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
+import Leetcode from "../../../../public/leetcode.png";
+import Unicolab from "../../../../public/unicolab_logo.png";
 import Link from "next/link";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 export const Contact = () => {
   return (
@@ -37,7 +40,7 @@ export const Contact = () => {
       </motion.div>
       <Footer />
       <div className="footer-heading absolute bottom-0 w-full text-center">
-        Copyright @ 2024 Harshit Gaur Portfolio | All rights reserved
+        Copyright @ 2024 Vansh Sharma Portfolio | All rights reserved
       </div>
     </div>
   );
@@ -96,18 +99,18 @@ const HeaderBlock = () => (
 const SocialsBlock = () => (
   <>
     <Block
-      className="youtube col-span-6 bg-red-500 md:col-span-3"
+      className="youtube col-span-6 md:col-span-3"
       whileHover={{
         rotate: "2.5deg",
         scale: 1.1,
       }}
     >
       <Link
-        href="https://www.youtube.com/channel/UC0tEujoqN892BdHyfe4ygsQ"
+        href="https://leetcode.com/u/vns444555/"
         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiYoutube />
+        <Image src={Leetcode} alt="Leetcode Logo" width={35} height={35} />
       </Link>
     </Block>
     <Block
@@ -122,7 +125,7 @@ const SocialsBlock = () => (
         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <FaInstagram />
+        <Image src={Unicolab} alt="Leetcode Logo" height={40} />
       </Link>
     </Block>
     <Block
@@ -192,7 +195,10 @@ const Footer = () => {
     <footer className="relative z-10 mt-12">
       <p className="text-center text-zinc-400">
         Made with ❤️ by{" "}
-        <Link href="https://www.linkedin.com/in/vansh-sharma-0b4676267/" className="text-red-300 hover:underline">
+        <Link
+          href="https://www.linkedin.com/in/vansh-sharma-0b4676267/"
+          className="text-red-300 hover:underline"
+        >
           Vansh Sharma
         </Link>
       </p>
