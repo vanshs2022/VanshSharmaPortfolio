@@ -2,13 +2,7 @@
 import React from "react";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useMotionTemplate } from "framer-motion";
-import { useMotionValue } from "framer-motion";
-import { animate } from "framer-motion";
-import { motion } from "framer-motion";
-import BubbleText from "./BubbleText";
-import { DivOrigami } from "./LogoOrigami";
-import { Example } from "./ClipPathLinks";
+import DivOrigami from "./LogoOrigami";
 
 const Skill = () => {
   return (
@@ -19,11 +13,8 @@ const Skill = () => {
         </Canvas>
       </div>
       <div className="flex items-center gap-[40px]">
-        <BubbleText />
         <DivOrigami />
       </div>
-      {/* <Example /> */}
-
     </div>
   );
 };
