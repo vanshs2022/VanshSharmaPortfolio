@@ -11,15 +11,16 @@ import Skill from "./components/Skills/Skill";
 const page = () => {
   return (
     <div className="app relative">
-      {/* <Navbar />             
+      <Navbar />             
       <AuroraHero />
       <Marquee name={"ABOUT ME"}/>
       <About />
       <Marquee name={"PROJECTS"}/>
-      <Projects /> */}
+      <Projects />
+      <Marquee name={"SKILLS"}/>
       <Skill />
-      {/* <Marquee name={"CONTACT"}/>
-      <Contact /> */}
+      <Marquee name={"CONTACT"}/>
+      <Contact />
     </div>
   );
 };

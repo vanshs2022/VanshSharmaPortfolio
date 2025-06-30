@@ -6,6 +6,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import expressLogo from "../../../../public/express.png";
 import { DiMongodb, DiMysql, DiCodeigniter, DiGit } from "react-icons/di";
+import Description from "./Description";
 import "./flipcard.css";
 
 const skills = [
@@ -72,19 +73,32 @@ export default function DivOrigami() {
   const currentClass = currentSkill.className;
 
   return (
-    <div className="w-[300px] h-[300px] perspective mx-auto mt-24">
+    <div className="w-full h-full flex justify-center items-center gap-16">
       <div
-        className="w-full h-full transition-transform duration-700 preserve-3d"
-        style={{ transform: `rotateY(${rotation}deg)` }}
+        className="w-[400px] h-[300px] p-4 mx-auto rounded-xl border border-white/30 bg-white/5"
+        style={{
+          background: "rgba(255, 255, 255, 0.05)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+        }}
       >
+        <Description index={index} />
+      </div>
+      <div className="w-[300px] h-[300px] perspective mx-auto">
         <div
-          className={`w-full h-full flex items-center justify-center text-6xl rounded-xl shadow-xl ${currentClass}`}
+          className="w-full h-full transition-transform duration-700 preserve-3d"
+          style={{ transform: `rotateY(${rotation}deg)` }}
         >
-          {currentSkill.type === "icon" ? (
-            <CurrentIcon />
-          ) : (
-            <Image src={CurrentIcon} alt="Express" width={100} height={100} />
-          )}
+          <div
+            className={`w-full h-full flex items-center justify-center text-6xl rounded-xl shadow-xl ${currentClass}`}
+          >
+            {currentSkill.type === "icon" ? (
+              <CurrentIcon />
+            ) : (
+              <Image src={CurrentIcon} alt="Express" width={100} height={100} />
+            )}
+          </div>
         </div>
       </div>
     </div>
