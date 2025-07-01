@@ -10,7 +10,7 @@ const Card = (props) => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="project-cards relative flex w-full items-center p-8 gap-8"
+      className="project-cards relative flex w-full justify-between items-center p-8 gap-8"
     >
       <Example image={props.image} title={props.heading} link={props.link} />
       <div className="project-heading flex flex-col items-center">

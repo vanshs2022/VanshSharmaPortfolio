@@ -8,14 +8,10 @@ import {
 } from "framer-motion";
 import { FiMousePointer } from "react-icons/fi";
 import Link from "next/link";
-// import Link from 'react/next'
 
 const Example = (props) => {
   return (
     <Link
-      // initial={{ opacity: 0 }}
-      // whileInView={{ opacity: 1 }}
-      // transition={{ duration: 2 }}
       href={props.link}
       target="_blank"
       className="grid w-full place-content-center  px-4 py-12 text-slate-900"
@@ -77,6 +73,7 @@ const TiltCard = (props) => {
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
+          width : "250px"
         }}
         className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
       >
