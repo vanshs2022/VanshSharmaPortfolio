@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaHtml5, FaReact, FaJava, FaNodeJs, FaPython } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import expressLogo from "../../../../public/express.png";
+import expressLogo from "/express.png";
 import { DiMongodb, DiMysql, DiCodeigniter, DiGit } from "react-icons/di";
 import Description from "./Description";
 import "./flipcard.css";
