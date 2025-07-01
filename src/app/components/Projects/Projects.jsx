@@ -13,16 +13,16 @@ const Projects = () => {
       para: "UniCoLab is a platform with a goal of connect huge talent to its seekers, making collaborations and conquering the world with thier potential. This platform is built using Next.js, Tailwind CSS, Express.js and MongoDB.",
     },
     {
-      image: "/twogood.png",
-      link: "https://harshitgaur2205.github.io/twogoodclone.github.in/",
+      image: "/steganography.png",
+      link: "https://steganographytool-fexw.onrender.com/",
       name: "Steganography Tool",
-      para: "This tool is for hiding of data inside the image in encrypted form for security of texts and message to be transferred over th4e internet. It is built using Python with the help of flask library for web hosting.",
+      para: "This tool is for hiding of data inside the image in encrypted form for security of texts and message to be transferred over the internet. It is built using Python with the help of flask library for web hosting.",
     },
     {
-      image: "/duofinal.png",
-      link: "https://harshitgaur2205.github.io/project-2.github.in/",
-      name: "DUO STUDIO CLONE",
-      para: "This web page is a clone of an award-winning website and also contains some of my additional features. This project challenged me with new ways of adding animations and designs in a website using pure CSS, HTML, and JavaScript.",
+      image: "/TraveInGlobe.png",
+      link: "https://traveln-globe.vercel.app/",
+      name: "TraveInGlobe",
+      para: "This is a website for travel booking, enabling a seamless user interface for travel booking to specific locations. This project was built using React.js and CSS being it my first react project.",
     },
   ];
 
