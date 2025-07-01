@@ -4,7 +4,6 @@ import Image from "next/image";
 import { FaHtml5, FaReact, FaJava, FaNodeJs, FaPython } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import expressLogo from "/express.png";
 import { DiMongodb, DiMysql, DiCodeigniter, DiGit } from "react-icons/di";
 import Description from "./Description";
 import "./flipcard.css";
@@ -46,7 +45,7 @@ const skills = [
   },
   { icon: DiMysql, className: "bg-indigo-300 text-neutral-900", type: "icon" },
   {
-    icon: expressLogo,
+    icon: "/express.png",
     className: "bg-yellow-300 text-white rotate-y-180",
     type: "image",
   },

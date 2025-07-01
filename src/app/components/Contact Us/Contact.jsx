@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMapPin, FiMail } from "react-icons/fi";
 import { SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
-import Leetcode from "/leetcode.png";
-import Unicolab from "/unicolab_contact.png";
 import Link from "next/link";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
@@ -110,7 +108,7 @@ const SocialsBlock = () => (
         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <Image src={Leetcode} alt="Leetcode Logo" width={35} height={35} />
+        <Image src={"/leetcode.png"} alt="Leetcode Logo" width={35} height={35} />
       </Link>
     </Block>
     <Block
@@ -125,7 +123,7 @@ const SocialsBlock = () => (
         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <Image src={Unicolab} alt="Leetcode Logo" height={40} />
+        <Image src={"/unicolab_contact.png"} alt="Leetcode Logo" width={100} height={40} />
       </Link>
     </Block>
     <Block
