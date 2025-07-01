@@ -108,7 +108,7 @@ const SocialsBlock = () => (
         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <Image src={"/leetcode.png"} alt="Leetcode Logo" width={35} height={35} />
+        <Image src={"/LeetCode.png"} alt="Leetcode Logo" width={35} height={35} />
       </Link>
     </Block>
     <Block
