@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <motion.div className="navbar"     >
+    <motion.div className="navbar">
       <BubbleText />
       <Slidetabs />
       <SlideInNotifications />

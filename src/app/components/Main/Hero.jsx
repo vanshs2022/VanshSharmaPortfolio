@@ -11,7 +11,7 @@ import {    animate  } from "framer-motion";
 import BubbleText from "./BubleText";
 import Link from "next/link";
 
-const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+const COLORS_TOP = ["#00F5A0", "#00D9F5", "#4B6CFA", "#A259FF", "#FF6AC2", "#FFB86B"];
 
 export const AuroraHero = () => {
   const color = useMotionValue(COLORS_TOP[0]);

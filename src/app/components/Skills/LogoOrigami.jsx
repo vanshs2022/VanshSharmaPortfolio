@@ -73,9 +73,9 @@ export default function DivOrigami() {
   const currentClass = currentSkill.className;
 
   return (
-    <div className="w-full h-full flex justify-center items-center gap-16">
+    <div className="w-full h-full flex justify-center items-center gap-40">
       <div
-        className="w-[400px] h-[300px] p-4 mx-auto rounded-xl border border-white/30 bg-white/5"
+        className="w-[450px] h-[450px] p-16 mx-auto rounded-xl border border-white/30 bg-white/5"
         style={{
           background: "rgba(255, 255, 255, 0.05)",
           backdropFilter: "blur(20px)",

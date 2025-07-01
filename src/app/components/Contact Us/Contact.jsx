@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMapPin, FiMail } from "react-icons/fi";
 import { SiGithub, SiTwitter, SiYoutube } from "react-icons/si";
 import Leetcode from "../../../../public/leetcode.png";
-import Unicolab from "../../../../public/unicolab_logo.png";
+import Unicolab from "../../../../public/unicolab_contact.png";
 import Link from "next/link";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
@@ -40,7 +40,7 @@ export const Contact = () => {
       </motion.div>
       <Footer />
       <div className="footer-heading absolute bottom-0 w-full text-center">
-        Copyright @ 2024 Vansh Sharma Portfolio | All rights reserved
+        Copyright @ 2025 Vansh Sharma Portfolio | All rights reserved
       </div>
     </div>
   );

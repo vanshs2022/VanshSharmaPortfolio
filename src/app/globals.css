@@ -61,7 +61,6 @@ html {
 
 .navbar {
   background-color: transparent;
-  /* backdrop-filter: blur(30px); */
   position: fixed;
   top: 0px;
   width: 100%;
