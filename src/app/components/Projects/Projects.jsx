@@ -8,7 +8,7 @@ const Projects = () => {
   const data = [
     {
       image: "/unicolab_logo.png",
-      link: "https://gaurfundation.vercel.app/",
+      link: "https://unicolab-three.vercel.app/",
       name: "UniCoLab",
       para: "UniCoLab is a platform with a goal of connect huge talent to its seekers, making collaborations and conquering the world with thier potential. This platform is built using Next.js, Tailwind CSS, Express.js and MongoDB.",
     },

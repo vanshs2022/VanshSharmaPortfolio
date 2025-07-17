@@ -119,7 +119,7 @@ const SocialsBlock = () => (
       }}
     >
       <Link
-        href="https://www.instagram.com/vansh/"
+        href="https://unicolab-three.vercel.app/explore/profile/6878b01e5d578f0ae974f703"
         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
