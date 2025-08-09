@@ -54,6 +54,7 @@ const skills = [
 export default function DivOrigami() {
   const [index, setIndex] = useState(0);
   const [rotation, setRotation] = useState(0);
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,6 +74,7 @@ export default function DivOrigami() {
 
   return (
     <div className="w-full h-full flex justify-center items-center gap-40">
+      {!isMobile && (
       <div
         className="w-[450px] h-[450px] p-16 mx-auto rounded-xl border border-white/30 bg-white/5"
         style={{
@@ -84,6 +86,7 @@ export default function DivOrigami() {
       >
         <Description index={index} />
       </div>
+      )}
       <div className="w-[300px] h-[300px] perspective mx-auto">
         <div
           className="w-full h-full transition-transform duration-700 preserve-3d"
