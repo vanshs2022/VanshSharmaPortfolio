@@ -5,16 +5,18 @@ import { useDragControls } from "framer-motion";
 import { useMotionValue } from "framer-motion";
 import { useAnimate } from "framer-motion";
 import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
 
 const DragCloseDrawerExample = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="grid h-[20px] w-[fit-content]  place-content-center bg-neutral-950 z-[999] ">
+    <div className="grid w-fit place-content-center bg-transparent z-[999]">
       <button
         onClick={() => setOpen(true)}
-        className="rounded bg-indigo-500 px-4 py-2 text-white transition-colors hover:bg-indigo-600"
+        className="group inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/6 px-6 py-3 text-sm font-semibold uppercase tracking-[0.24em] text-slate-100 transition duration-300 hover:border-white/20 hover:bg-white/10"
       >
-        Find Out
+        Explore More
+        <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
       </button>
 
       <DragCloseDrawer open={open} setOpen={setOpen}>

@@ -30,7 +30,7 @@ const About = () => {
     >
       <div className="canva absolute inset-0 z-0">
         <Canvas>
-          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+          <Stars radius={34} count={500} factor={2} fade speed={0.8} />
         </Canvas>
       </div>
 

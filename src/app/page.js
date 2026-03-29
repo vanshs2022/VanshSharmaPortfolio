@@ -7,6 +7,7 @@ import { Contact } from "./components/Contact Us/Contact";
 import Projects from "./components/Projects/Projects";
 import Marquee from "./components/Marquee/Marquee";
 import Skill from "./components/Skills/Skill";
+import Experience from "./components/Experience/Experience";
 
 const page = () => {
   return (
@@ -15,11 +16,10 @@ const page = () => {
       <AuroraHero />
       <Marquee name={"ABOUT ME"}/>
       <About />
+      <Experience />
       <Marquee name={"PROJECTS"}/>
       <Projects />
-      <Marquee name={"SKILLS"}/>
       <Skill />
-      <Marquee name={"CONTACT"}/>
       <Contact />
     </div>
   );

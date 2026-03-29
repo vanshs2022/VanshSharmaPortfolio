@@ -1,12 +1,13 @@
 "use client";
+
 import React, { useRef } from "react";
+import Image from "next/image";
 import {
   motion,
   useMotionTemplate,
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import { FiMousePointer } from "react-icons/fi";
 import Link from "next/link";
 
 const Example = (props) => {
@@ -14,15 +15,15 @@ const Example = (props) => {
     <Link
       href={props.link}
       target="_blank"
-      className="grid w-full place-content-center  px-4 py-12 text-slate-900"
+      className="grid w-full place-content-center px-2 py-6 text-slate-900 md:px-4 md:py-8"
     >
       <TiltCard rer={props.image} title={props.title} />
     </Link>
   );
 };
 
-const ROTATION_RANGE = 32.5;
-const HALF_ROTATION_RANGE = 32.5 / 2;
+const ROTATION_RANGE = 20;
+const HALF_ROTATION_RANGE = 10;
 
 const TiltCard = (props) => {
   const ref = useRef(null);
@@ -36,10 +37,9 @@ const TiltCard = (props) => {
   const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 
   const handleMouseMove = (e) => {
-    if (!ref.current) return [0, 0];
+    if (!ref.current) return;
 
     const rect = ref.current.getBoundingClientRect();
-
     const width = rect.width;
     const height = rect.height;
 
@@ -67,28 +67,34 @@ const TiltCard = (props) => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="relative h-96 w-72 rounded-xl bg-gradient-to-br from-indigo-300 to-violet-300"
+      className="relative h-[22rem] w-[18rem] rounded-[28px] border border-white/10 bg-gradient-to-br from-cyan-300/80 via-slate-200 to-white shadow-[0_24px_60px_rgba(15,23,42,0.35)]"
     >
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
-          width : "250px"
         }}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
+        className="absolute inset-4 flex flex-col items-center justify-center rounded-[22px] bg-white px-5 py-6 shadow-lg"
       >
-        <img
-          src={props.rer}
+        <div
           style={{
             transform: "translateZ(75px)",
           }}
-          className="mx-auto text-4xl"
-        />
+          className="flex h-40 w-full items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4"
+        >
+          <Image
+            src={props.rer}
+            alt={props.title}
+            width={220}
+            height={140}
+            className="h-full w-full object-contain"
+          />
+        </div>
         <p
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-xl font-bold"
+          className="mt-5 text-center text-xl font-bold text-slate-800"
         >
           {props.title}
         </p>

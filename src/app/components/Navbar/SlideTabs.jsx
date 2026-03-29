@@ -21,10 +21,11 @@ const SlideTabs = () => {
           opacity: 0,
         }));
       }}
-      className="relative flex w-fit rounded-full border-2 border-color: rgb(82 82 91) bg-white p-1"
+      className="navbar-tabs relative flex w-fit max-w-[calc(100vw-2rem)] overflow-x-auto rounded-full border border-white/15 bg-white/95 p-1 shadow-[0_12px_40px_rgba(15,23,42,0.22)]"
     >
       <Tab setPosition={setPosition}><Link href="/">Home</Link></Tab>
       <Tab setPosition={setPosition}><Link href="#about">About Me</Link></Tab>
+      <Tab setPosition={setPosition}><Link href="#experience">Experience</Link></Tab>
       <Tab setPosition={setPosition}><Link href="#project">Projects</Link></Tab>
       <Tab setPosition={setPosition}><Link href="#contact">Contact</Link></Tab>
       <Cursor position={position} />
@@ -49,7 +50,7 @@ const Tab = ({ children, setPosition }) => {
           opacity: 1,
         });
       }}
-      className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+      className="relative z-10 block shrink-0 cursor-pointer px-3 py-2 text-[0.7rem] uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
     >
       {children}
     </li>

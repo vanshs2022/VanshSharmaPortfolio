@@ -1,16 +1,15 @@
 import React from "react";
-import styles from "./bubble.module.css";
-
 
 const BubbleText = () => {
   return (
-    <h2 className="bonjour text-center text-4xl font-thin text-indigo-300">
-      {"Decoded".split("").map((child, idx) => (
-        <span className={styles.hoverText} key={idx}>
-          {child}
-        </span>
-      ))}
-    </h2>
+    <div className="bonjour flex flex-col items-center leading-none">
+      <span className="text-[1.35rem] font-semibold text-slate-100 md:text-[1.55rem]">
+        Vansh Sharma
+      </span>
+      <span className="mt-1 text-[0.58rem] font-semibold uppercase tracking-[0.34em] text-slate-500">
+        Software Engineer
+      </span>
+    </div>
   );
 };
 

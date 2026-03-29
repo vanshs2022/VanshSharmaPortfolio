@@ -1,17 +1,14 @@
-"use client"
+"use client";
+
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React from "react";
-import  { useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi";
-import {useMotionTemplate} from "framer-motion";
-import {useMotionValue} from "framer-motion";
-import { motion } from "framer-motion";
-import {    animate  } from "framer-motion";
+import React, { useEffect } from "react";
+import { FiArrowRight, FiDownload, FiMail } from "react-icons/fi";
+import { useMotionTemplate, useMotionValue, motion, animate } from "framer-motion";
 import BubbleText from "./BubleText";
 import Link from "next/link";
 
-const COLORS_TOP = ["#00F5A0", "#00D9F5", "#4B6CFA", "#A259FF", "#FF6AC2", "#FFB86B"];
+const COLORS_TOP = ["#3f3f46", "#09090b", "#18181b", "#09090b"];
 
 export const AuroraHero = () => {
   const color = useMotionValue(COLORS_TOP[0]);
@@ -23,55 +20,72 @@ export const AuroraHero = () => {
       repeat: Infinity,
       repeatType: "mirror",
     });
-  }, []);
+  }, [color]);
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
-  const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
+  const boxShadow = useMotionTemplate`0px 10px 40px ${color}`;
 
   return (
     <motion.section
-    
-    style={{
+      style={{
         backgroundImage,
       }}
       id="home"
-      className="main relative grid h-[100vh] w-[100vw] place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
+      className="main relative grid min-h-[100vh] w-[100vw] place-content-center overflow-hidden bg-gray-950 px-4 py-20 text-gray-200 md:px-6 md:py-24"
     >
-      <div className="relative z-10 flex flex-col items-center">
-        
-        {/* <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight"> */}
-           <BubbleText  />
-        <motion.p
-          
-         className="mb-[20px] max-w-l text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-          Scroll Down To Know More About Me
+      <div className="hero-shell relative z-10 mx-auto flex max-w-5xl flex-col items-center rounded-[28px] border border-white/10 bg-slate-950/35 px-5 py-8 text-center shadow-[0_25px_120px_rgba(2,6,23,0.7)] backdrop-blur-xl md:rounded-[32px] md:px-16 md:py-16">
+        <div className="mb-5 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-slate-200 md:text-xs md:tracking-[0.35em]">
+          Software Engineering Intern at Incedo Inc.
+        </div>
+        <BubbleText />
+        <motion.p className="mt-5 max-w-3xl text-center text-base leading-7 text-slate-300 md:text-xl md:leading-8">
+          I build full-stack web products with a strong focus on clean user
+          experiences, thoughtful engineering, and practical problem solving.
         </motion.p>
-        <motion.button
-          style={{
-            border,
-            boxShadow,
-          }}
-          whileHover={{
-            scale: 1.015,
-          }}
-          whileTap={{
-            scale: 0.985,
-          }}
-          className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-        >
-          <Link href="https://drive.google.com/file/d/1P_-ae_ILGyehvtsald41inWsIS99yVAt/view" target="_blank" >RESUME</Link>
-          <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-        </motion.button>
+        <motion.p className="mt-4 max-w-[18rem] text-xs uppercase tracking-[0.28em] text-slate-500 md:mt-3 md:max-w-2xl md:text-base md:tracking-[0.3em]">
+          Next.js • React • Node.js • MongoDB • Tailwind CSS
+        </motion.p>
+        <div className="mt-8 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center md:w-auto md:gap-4">
+          <motion.div
+            style={{
+              border,
+              boxShadow,
+            }}
+            whileHover={{
+              scale: 1.015,
+            }}
+            whileTap={{
+              scale: 0.985,
+            }}
+            className="group relative flex w-full items-center justify-center gap-2 rounded-full bg-zinc-900/80 px-5 py-3 text-sm font-semibold text-gray-50 transition-colors hover:bg-black sm:w-fit"
+          >
+            <FiDownload />
+            <Link
+              href="https://drive.google.com/file/d/1P_-ae_ILGyehvtsald41inWsIS99yVAt/view"
+              target="_blank"
+            >
+              View Resume
+            </Link>
+            <FiArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+          </motion.div>
+          <Link
+            href="#contact"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-white/20 hover:bg-white/10 sm:w-fit"
+          >
+            <FiMail />
+            Let&apos;s Connect
+          </Link>
+        </div>
       </div>
 
       <div className="absolute inset-0 z-0">
         <Canvas>
-          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+          <Stars radius={28} count={320} factor={1.7} fade speed={0.6} />
         </Canvas>
       </div>
     </motion.section>
   );
 };
 
-export default AuroraHero ; 
+export default AuroraHero;

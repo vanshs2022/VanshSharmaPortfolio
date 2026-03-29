@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 const BubbleText = () => {
   return (
     <div className="header">
-      <span className=" inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-sm">
-        MY NAME IS
+      <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-300">
+        My Name Is
       </span>
       <div>
         <motion.h2
-          className="harshit text-center text-[10vw] font-thin text-indigo-300 w-[80vw] h-[fit-content]"
+          className="harshit h-[fit-content] w-auto whitespace-nowrap text-center font-semibold text-slate-100"
         >
           {"VANSH SHARMA".split("").map((child, idx) => (
             <span className={styles.hoverText} key={idx}>
