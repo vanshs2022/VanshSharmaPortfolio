@@ -133,7 +133,7 @@ const SocialsBlock = () => (
         className="grid h-full place-content-center text-3xl text-white"
       >
         <div className="flex h-12 w-12 items-center justify-center">
-          <Image src={"/leetcode.png"} alt="Leetcode Logo" width={36} height={36} />
+          <Image src={"/leetcode.png"} alt="Leetcode Logo" width={36} height={36} className="h-auto w-auto object-contain" />
         </div>
       </Link>
     </Block>
