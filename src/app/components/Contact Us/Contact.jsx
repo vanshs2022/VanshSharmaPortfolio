@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { Stars } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiBriefcase, FiMail, FiMapPin } from "react-icons/fi";
@@ -10,6 +8,7 @@ import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import Image from "next/image";
+import StarField from "../Performance/LazyStarField";
 
 export const Contact = () => {
   return (
@@ -18,11 +17,7 @@ export const Contact = () => {
       id="contact"
       className="contact relative flex min-h-screen flex-col items-center justify-center px-4 py-20 text-zinc-50 md:px-8"
     >
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={32} count={450} factor={2} fade speed={0.8} />
-        </Canvas>
-      </div>
+      <StarField className="absolute inset-0 z-0" count={240} speed={0.6} />
       <div className="relative z-10 mx-auto mb-12 max-w-3xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.34em] text-cyan-300 md:text-sm md:tracking-[0.45em]">
           Contact
@@ -218,7 +213,7 @@ const OpportunityBlock = () => (
           Building scalable web experiences and growing as a full-stack engineer.
         </p>
       </div>
-      <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
+      <div className="w-200 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300">
         <FiBriefcase />
         Software Engineering Intern
       </div>

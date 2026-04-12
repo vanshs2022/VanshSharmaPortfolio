@@ -3,8 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
+import StarField from "../Performance/LazyStarField";
 
 const experiences = [
   {
@@ -36,11 +35,13 @@ const Experience = () => {
       id="experience"
       className="experience relative flex min-h-screen w-[100vw] items-center justify-center px-6 py-24"
     >
-      <div className="canva absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={28} count={280} factor={1.6} fade speed={0.6} />
-        </Canvas>
-      </div>
+      <StarField
+        className="canva absolute inset-0 z-0"
+        radius={28}
+        count={180}
+        factor={1.6}
+        speed={0.45}
+      />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-10">
         <motion.div

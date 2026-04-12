@@ -1,12 +1,11 @@
 "use client";
 
-import { Stars } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import React, { useEffect } from "react";
 import { FiArrowRight, FiDownload, FiMail } from "react-icons/fi";
 import { useMotionTemplate, useMotionValue, motion, animate } from "framer-motion";
 import BubbleText from "./BubleText";
 import Link from "next/link";
+import StarField from "../Performance/LazyStarField";
 
 const COLORS_TOP = ["#3f3f46", "#09090b", "#18181b", "#09090b"];
 
@@ -79,11 +78,13 @@ export const AuroraHero = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={28} count={320} factor={1.7} fade speed={0.6} />
-        </Canvas>
-      </div>
+      <StarField
+        className="absolute inset-0 z-0"
+        radius={28}
+        count={220}
+        factor={1.7}
+        speed={0.5}
+      />
     </motion.section>
   );
 };

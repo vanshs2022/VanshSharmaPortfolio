@@ -1,4 +1,3 @@
-"use client"
 import React from "react";
 import Navbar from "./Navbar";
 import AuroraHero from "./components/Main/Hero"
@@ -16,6 +15,7 @@ const page = () => {
       <AuroraHero />
       <Marquee name={"ABOUT ME"}/>
       <About />
+      <Marquee name={"EXPERIENCE"}/>
       <Experience />
       <Marquee name={"PROJECTS"}/>
       <Projects />

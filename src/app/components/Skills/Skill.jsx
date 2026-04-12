@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { Stars } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import StarField from "../Performance/LazyStarField";
 
 const skillGroups = [
   {
@@ -29,11 +28,7 @@ const Skill = () => {
       id="skills"
       className="skill relative flex min-h-screen w-[100vw] flex-col items-center justify-center px-4 py-20 md:px-6"
     >
-      <div className="canva absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={32} count={450} factor={2} fade speed={0.8} />
-        </Canvas>
-      </div>
+      <StarField className="canva absolute inset-0 z-0" count={240} speed={0.6} />
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-10">
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.34em] text-cyan-300 md:text-sm md:tracking-[0.45em]">

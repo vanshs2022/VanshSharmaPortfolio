@@ -1,38 +1,19 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Stars } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
+import React from "react";
 import TypeWriiter from "./TypeWriiter";
 import DragCloseDrawerExample from "./DragCloseDrawerExample";
-import { useMotionTemplate, useMotionValue, animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import StarField from "../Performance/LazyStarField";
+
+const aboutHighlights = ["Full-stack web", "AI projects", "Product thinking"];
 
 const About = () => {
-  const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
-  const color = useMotionValue(COLORS_TOP[0]);
-
-  useEffect(() => {
-    animate(color, COLORS_TOP, {
-      ease: "easeInOut",
-      duration: 10,
-      repeat: Infinity,
-      repeatType: "mirror",
-    });
-  }, []);
-
-  const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 10% 48%, #020617 50%, ${color})`;
-  const border = useMotionTemplate`1px solid ${color}`;
-  const boxShadow = useMotionTemplate`0px 4px 4px ${color}`;
-
   return (
     <motion.div
       id="about"
       className="about h-[100vh] w-[100vw] bg-black-900 flex flex-col items-center justify-center relative"
     >
-      <div className="canva absolute inset-0 z-0">
-        <Canvas>
-          <Stars radius={34} count={500} factor={2} fade speed={0.8} />
-        </Canvas>
-      </div>
+      <StarField className="canva absolute inset-0 z-0" count={260} speed={0.6} />
 
       <motion.h1
         initial={{ y: -200 , opacity:0 }}
@@ -40,7 +21,7 @@ const About = () => {
         viewport={{ once: true }}
         transition={{ duration: 1.4, type: "spring" , stiffness:100 }}
         id="about-heading"
-        className="about-txt text-[4.5vw] font-black text-slate-500 shadow-[900px]"
+        className="about-txt text-[4.5vw] font-black uppercase tracking-[0.12em] text-slate-200"
       >
         KNOW MORE ABOUT ME 
       </motion.h1>
@@ -49,16 +30,44 @@ const About = () => {
         whileInView={{ y: 0 , opacity:1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay:0.5, type: "spring" ,stiffness:200 }}
+        className="hidden md:block"
       >
         <TypeWriiter />
       </motion.div>
       <br />
       <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className="about-mobile-story relative z-10 md:hidden"
+      >
+        <p className="about-mobile-kicker">Developer Profile</p>
+        <h2>Building useful products with clean engineering.</h2>
+        <p>
+          I am Vansh Sharma, a BTech student at VIT who enjoys turning ideas
+          into full-stack products, polished interfaces, and practical AI
+          experiments.
+        </p>
+        <div className="about-mobile-tags">
+          {aboutHighlights.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
+        <div className="about-mobile-note">
+          <p>
+            I work across React, Tailwind, Express, databases, and model-driven
+            projects. I like building things that feel clear, fast, and useful
+            from the first tap.
+          </p>
+        </div>
+      </motion.div>
+      <motion.div
         initial={{ opacity: 0,  y: -50 }}
         whileInView={{ opacity: 1,  y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 1, type: "spring" , stiffness:300 }}
-        className="relative z-10"
+        className="relative z-10 hidden md:block"
       >
         <DragCloseDrawerExample />
       </motion.div>

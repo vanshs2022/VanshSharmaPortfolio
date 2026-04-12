@@ -1,9 +1,11 @@
 import React from "react";
 
-const Marquee = ({name}) => {
+const Marquee = ({ name, className = "" }) => {
+  const itemWidth = name.length > 8 ? `${name.length * 25}px` : "200px";
+
   return (
-    <div>
-      <div className="wrapper">
+    <div className={className}>
+      <div className="wrapper" style={{ "--marquee-item-width": itemWidth }}>
         <div className="itemLeft item1">{name}</div>
         <div className="itemLeft item2">{name}</div>
         <div className="itemLeft item3">{name}</div>
