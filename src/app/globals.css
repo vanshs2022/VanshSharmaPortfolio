@@ -76,8 +76,9 @@ h3 {
 
 .navbar {
   background-color: transparent;
-  position: fixed;
-  top: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 999;
   height: 130px;
@@ -104,7 +105,7 @@ h3 {
 }
 
 .navbar-scrolled {
-  top: 14px;
+  top: 0;
   padding-inline: 1.25rem;
 }
 
